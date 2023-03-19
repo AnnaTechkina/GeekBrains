@@ -1,4 +1,7 @@
-﻿void Palindrom(int number)
+﻿Console.WriteLine("Введите пятизначное число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+void Palindrom(int number)
 {
     if(number >= 10000)
     {
@@ -19,7 +22,5 @@
     else
     Console.WriteLine("Нужно ввести пятизначное число");
 }
- 
-Console.WriteLine("Введите пятизначное число");
-int number = Convert.ToInt32(Console.ReadLine());
+
 Palindrom(number);
