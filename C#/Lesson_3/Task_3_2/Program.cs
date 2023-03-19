@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Введите координаты");
+﻿Console.WriteLine("Введите координаты: ");
 int x_1 = Convert.ToInt32(Console.ReadLine());
 int x_2 = Convert.ToInt32(Console.ReadLine());
 int y_1 = Convert.ToInt32(Console.ReadLine());
