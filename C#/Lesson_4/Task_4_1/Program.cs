@@ -5,14 +5,15 @@ int b = Convert.ToInt32(Console.ReadLine());
 int i = 0;
 int rezalt = 1;
 
-Console.WriteLine(Degree(a,b));
-void Degree(int a, int b)
+
+
+degree(a,b);
+void degree(int a, int b)
 {
-while (i < b)
-{
-  rezalt*=a;
-  i++;
-  return rezalt;
+  while (i < b)
+  {
+    rezalt*=a;
+    i++;
+  }
+  Console.WriteLine(rezalt);
 }
-}
-//Console.WriteLine(rezalt);
