@@ -25,7 +25,7 @@ void ArithmeticMean(int[,] array)
             sum += array[i, j];
             results = sum / array.GetLength(0);
         }
-        Console.Write(results + " ");
+        Console.Write($"{results:F2}\t");
     }
 }
 
