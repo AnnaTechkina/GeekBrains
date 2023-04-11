@@ -5,8 +5,13 @@ Console.WriteLine("Введите число ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
-while (n > 0)
+
+Console.WriteLine(nums(n));
+
+int nums(int n)
 {
+    if (n == 0) return 0;
     Console.WriteLine(n);
-    n--;
+    return nums(n-1);    
 }
+    
