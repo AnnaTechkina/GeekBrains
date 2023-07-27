@@ -1,18 +1,29 @@
-package JAVA.Lesson1;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class task1 {
 
-    public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in);
-        System.out.printf("Введите первое число: ");
-        int i = iScanner.nextInt();
-        System.out.printf("Треугольное число: %d\n", giveMeNumber(i));
-        iScanner.close();
+    public static StringBuilder getCondition(Map<String, String> params) {
+        StringBuilder result = new StringBuilder();
+        for (Map.Entry<String, String> pair : params.entrySet()) {
+            if (pair.getValue() != null) {
+                if (result.toString().equals("")) {
+                    result.append(pair.getKey() + " = '" + pair.getValue() + "'");
+                } else {
+                    result.append(" and " + pair.getKey() + " = '" + pair.getValue() + "'");
+                }
+            }
+        }
+        return result;
     }
 
-    public static int giveMeNumber(int a) {
-        return (a * (a + 1)) / 2;
+    public static void main(String[] args) {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("name", "Ivanov");
+        params.put("country", "Ukraine");
+        params.put("city", "Kiev");
+        params.put("age", null);
+        System.out.println(getCondition(params));
     }
 }
